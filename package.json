@@ -1,0 +1,32 @@
+{
+  "name": "url-parser-exercise",
+  "version": "1.0.0",
+  "description": "Reporitory where I'll save one of the tests I've done for a technical interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedeArzuaga/url-parser-exercise.git"
+  },
+  "author": "Federico Arzuaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedeArzuaga/url-parser-exercise/issues"
+  },
+  "homepage": "https://github.com/fedeArzuaga/url-parser-exercise#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-less": "^5.0.0",
+    "gulp-minify": "^3.1.0"
+  }
+}
