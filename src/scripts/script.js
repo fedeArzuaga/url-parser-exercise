@@ -1,4 +1,4 @@
-export function urlParser ( urlFormatString, urlInstance ) {
+function urlParser ( urlFormatString, urlInstance ) {
 
     // Spliting the given format into different parts
     const newObjectProperties = splitAnyString( urlFormatString, '/' );
@@ -39,4 +39,37 @@ export function urlParser ( urlFormatString, urlInstance ) {
 function splitAnyString( string, character ) {
     return string.split(character)
                  .filter( string => string.length != 0);
+}
+
+function validateFormat( firstString, secondString, character ) {
+
+    const firstStringCharacters = howManyCharacters(firstString, character);
+    const secondStringCharacters = howManyCharacters(secondString, character);
+
+    if ( firstStringCharacters == secondStringCharacters ) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+function howManyCharacters( string, character ) {
+    if ( string.length > 0 && string != undefined ) {
+        let counter = 0;
+        for( let i = 0; i < string.length; i++ ) {
+            if ( string[i] == character ) {
+                counter++;
+            }
+        }
+        return counter;
+    } else {
+        return "error";
+    }
+}
+
+function uiMessages( message, type ) {
+
+    
+
 }

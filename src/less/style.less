@@ -30,16 +30,17 @@ html {
 
 .theme-form {
     margin-top: 1rem;
+    position: relative;
 
     .theme-label {
         display: block;
         width: 100%;
 
         & + .theme-label {
-            margin-top: 20px;
+            margin-top: 40px;
 
             @media screen and (min-width: @breakpoint-s) {
-                margin-left: 20px;
+                margin-left: 40px;
                 margin-top: 0;
             }
 
@@ -71,6 +72,26 @@ html {
 
     }
 
+    .ui-alert {
+        border-radius: 4px;
+        background: transparent;
+        height: 25px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        font-size: 0.8rem;
+        color: lighten(@text-color, 20);
+        right: 0;
+    }
+
+    .ui-alert.ui-alert-error {
+        color: @error-color;
+    }
+
+    .ui-alert.ui-alert-success {
+        color: @success-color;
+    }
+
 }
 
 .theme-red-button {
@@ -83,7 +104,7 @@ html {
     border-radius: 4px;
     background: darken(@muted-color, 10%);
     box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-    margin-top: 20px;
+    margin-top: 40px;
     color: lighten(@text-color, 25%);
     padding: 10px;
     font-family: @cutive-font-family;
