@@ -29,9 +29,6 @@ function compileLess() {
 // JS
 function js() {
     return src('src/scripts/**/*.js')
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
         .pipe(minifyJS())
         .pipe(dest('dist/scripts'))
 }

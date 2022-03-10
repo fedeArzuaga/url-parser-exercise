@@ -1,0 +1,53 @@
+@import "variables";
+
+.theme-flex {
+    display: flex;
+}
+
+.theme-flex-left {
+    justify-content: flex-start;
+}
+
+.theme-flex-bottom {
+    align-items: flex-end;
+}
+
+.theme-flex-middle {
+    align-items: center;
+}
+
+.theme-flex-column {
+    flex-flow: column wrap;
+}
+
+.theme-flex-row {
+    flex-flow: row nowrap;
+}
+
+.theme-flex-1 {
+    flex: 1;
+}
+
+.theme-flex-column-s {
+    @media screen and (min-width: @breakpoint-s) {
+        flex-flow: column wrap;
+    }
+}
+
+.theme-flex-row-s {
+    @media screen and (min-width: @breakpoint-s) {
+        flex-flow: row nowrap;
+    }
+}
+
+.theme-flex-column-m {
+    @media screen and (min-width: @breakpoint-m) {
+        flex-flow: column wrap;
+    }
+}
+
+.theme-flex-row-m {
+    @media screen and (min-width: @breakpoint-m) {
+        flex-flow: row nowrap;
+    }
+}
