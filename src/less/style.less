@@ -37,7 +37,7 @@ html {
         width: 100%;
 
         & + .theme-label {
-            margin-top: 40px;
+            margin-top: 20px;
 
             @media screen and (min-width: @breakpoint-s) {
                 margin-left: 40px;
@@ -69,19 +69,24 @@ html {
         padding-right: 20px;
         font-weight: 700;
         font-size: 0.8rem;
-
+        cursor: pointer;
     }
 
     .ui-alert {
         border-radius: 4px;
         background: transparent;
-        height: 25px;
-        position: absolute;
-        top: 80px;
+        line-height: 1.25rem;
+        min-height: 20px;
         left: 0;
         font-size: 0.8rem;
         color: lighten(@text-color, 20);
-        right: 0;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+        margin-top: 10px;
+    }
+
+    .ui-alert.ui-alert-visible {
+        opacity: 1;
     }
 
     .ui-alert.ui-alert-error {
@@ -97,6 +102,12 @@ html {
 .theme-red-button {
     background: @cta-color;
     color: #fff;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background: darken(@cta-color, 10%);
+    }
+
 }
 
 .output pre {
@@ -104,8 +115,8 @@ html {
     border-radius: 4px;
     background: darken(@muted-color, 10%);
     box-shadow: 0 3px 5px rgba(0,0,0,0.2);
-    margin-top: 40px;
-    color: lighten(@text-color, 25%);
+    margin-top: 10px;
+    color: lighten(@text-color, 15%);
     padding: 10px;
     font-family: @cutive-font-family;
     letter-spacing: -0.1px;

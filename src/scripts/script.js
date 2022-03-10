@@ -68,8 +68,14 @@ function howManyCharacters( string, character ) {
     }
 }
 
-function uiMessages( message, type ) {
+function uiMessages( message, type, messageContainer ) {
 
-    
+    messageContainer.textContent = message;
+    messageContainer.className = `ui-alert ui-alert-${type}`;
+    messageContainer.classList.add("ui-alert-visible");
+
+    setTimeout( () => {
+        messageContainer.classList.remove("ui-alert-visible");
+    }, 3000 );
 
 }
