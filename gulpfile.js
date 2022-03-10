@@ -19,7 +19,7 @@ function minifyHTML() {
 
 // Compile Less
 function compileLess() {
-    return src('src/less/*.less')
+    return src('src/less/**/*.less')
         .pipe( less() )
         .pipe( prefixer() )
         .pipe( minifyCSS() )
@@ -28,7 +28,7 @@ function compileLess() {
 
 // JS
 function js() {
-    return src('src/scripts/app.js')
+    return src('src/scripts/**/*.js')
         .pipe(babel({
             presets: ['@babel/env']
         }))
@@ -54,7 +54,7 @@ function browsersyncRelaod(callback) {
 // Create watch tasks
 function watchTask() {
     watch('src/*.html', series(minifyHTML, browsersyncRelaod));
-    watch('src/less/*.less', series(compileLess, browsersyncRelaod));
+    watch('src/less/**/*.less', series(compileLess, browsersyncRelaod));
     watch('src/scripts/*.js', series(js, browsersyncRelaod));
 }
 

@@ -10,7 +10,39 @@
 </head>
 <body>
 
-    <h1>URL Parser</h1>
+    <main id="main-content">
+
+        <div class="container container-m">
+            <h1>URL Parser</h1>
+
+            <form class="theme-form" id="url-parser-form">
+
+                <div class="theme-flex theme-flex-column theme-flex-row-s theme-flex-bottom">
+                    <label class="theme-label" for="url-format">
+                        <p>URL Format</p>
+                        <input class="theme-input" type="text" id="urlFormat" name="urlFormat" placeholder="Ex: /:version/api/:collection/:id" />
+                    </label>
+    
+                    <label class="theme-label" for="url-instance">
+                        <p>URL Instance</p>
+                        <input class="theme-input" type="text" id="urlInstance" name="urlInstance" placeholder="Ex: /6/api/listings/3?sort=desc&limit=10" />
+                    </label>
+
+                    <label for="submit" class="theme-label theme-flex-1">
+                        <input class="theme-submit theme-red-button" type="submit" value="Parse URL">
+                    </label>
+
+                </div>
+    
+            </form>
+
+            <div class="output">
+                <pre id="output">Output will be printed here</pre>
+            </div>
+
+        </div>
+
+    </main>
 
     <script type="text/javascript" src="scripts/app-min.js"></script>
     

@@ -1,9 +1,19 @@
-@import "variables/variables";
+@import "theme/variables";
+@import "theme/container";
+@import "theme/flex";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
     font-family: @font-family;
     line-height: 1.4;
     font-size: 14px;
+    background: @muted-color;
+    color: @text-color;
 
     @media screen and (min-width: @breakpoint-m) {
         font-size: 18px;
@@ -12,5 +22,71 @@ html {
     @media screen and (min-width: @breakpoint-l) {
         font-size: 20px;
     }
+}
 
+#main-content {
+    margin: 5rem 0;
+}
+
+.theme-form {
+    margin-top: 1rem;
+
+    .theme-label {
+        display: block;
+        width: 100%;
+
+        & + .theme-label {
+            margin-top: 20px;
+
+            @media screen and (min-width: @breakpoint-s) {
+                margin-left: 20px;
+                margin-top: 0;
+            }
+
+        }
+
+    }
+
+    .theme-input,
+    .theme-submit {
+        width: 100%;
+        line-height: 2.5rem;
+        padding: 0 10px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+
+        @media screen and (min-width: @breakpoint-m) {
+            line-height: 2rem;
+        }
+
+    }
+
+    .theme-submit {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: 700;
+        font-size: 0.8rem;
+
+    }
+
+}
+
+.theme-red-button {
+    background: @cta-color;
+    color: #fff;
+}
+
+.output pre {
+    height: 300px;
+    border-radius: 4px;
+    background: darken(@muted-color, 10%);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    margin-top: 20px;
+    color: lighten(@text-color, 25%);
+    padding: 10px;
+    font-family: @cutive-font-family;
+    letter-spacing: -0.1px;
+    text-align: left;
 }
