@@ -41,6 +41,7 @@ function splitAnyString( string, character ) {
                  .filter( string => string.length != 0);
 }
 
+// Helper function to validate if both strings has the same amount of 'x' character on it
 function validateFormat( firstString, secondString, character ) {
 
     const firstStringCharacters = howManyCharacters(firstString, character);
@@ -54,6 +55,7 @@ function validateFormat( firstString, secondString, character ) {
 
 }
 
+// Helper function that validates how many 'x' characters the string passed as the first argument has
 function howManyCharacters( string, character ) {
     if ( string.length > 0 && string != undefined ) {
         let counter = 0;
@@ -68,6 +70,7 @@ function howManyCharacters( string, character ) {
     }
 }
 
+// Helper function to handle UI messeges
 function uiMessages( message, type, messageContainer ) {
 
     messageContainer.textContent = message;
